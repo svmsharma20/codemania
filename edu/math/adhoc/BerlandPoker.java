@@ -61,7 +61,7 @@ M = Total number of jokers
 K = Number of players
 
 Points = (x-y)
-    where x = Number of joker player with highest number of joker
+    where x = Number of joker in hand of the player which has highest number of joker.
           y = Maximum number of joker hold by a player other than the maximum joker holding player 
               or 
               better to say number of joker in player's hand with second highest number of jokers
