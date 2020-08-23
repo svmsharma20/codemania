@@ -12,6 +12,11 @@ In his pocket Polycarp has an unlimited number of "10-burle coins" and exactly o
 
 What is the minimum number of shovels Polycarp has to buy so that he can pay for the purchase without any change? It is obvious that he can pay for 10 shovels without any change (by paying the requied amount of 10-burle coins and not using the coin of r burles). But perhaps he can buy fewer shovels and pay without any change. Note that Polycarp should buy at least one shovel.
 
+Note:
+For simple understanding consider:
+    10-burle coins => 1--rupees coin
+    r-burle coin   => any coin from 1-rupee coin to 9 rupee coin
+
 Input
 The single line of input contains two integers k and r (1 ≤ k ≤ 1000, 1 ≤ r ≤ 9) — the price of one shovel and the denomination of the coin in Polycarp's pocket that is different from "10-burle coins".
 
