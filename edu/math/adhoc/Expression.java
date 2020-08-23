@@ -54,35 +54,20 @@ public class Expression {
         int b = sc.nextInt();
         int c = sc.nextInt();
 
-        int maxValue = a * b * c;
+        int maxValue = 0;
 
-        /*
-         * In general, the max value is a*b*c.
-         * 
-         * If any one number is 1, Let's say, [1, x, y] & {x<y}; than => maxValue =
-         * (1+x)*y = y +xy
-         * 
-         * In case of [1, x, y] & {x>y} => maxValue = (1+y)x = x + xy
-         * 
-         * So, if one of the number is 1 than just add the largest number to the
-         * product.
-         * 
-         * In case of all the three numbers are 1s than we have to do addition only and
-         * the result will be 3.
-         */
-
-        if (a == 1 || b == 1 || c == 1) {
-            if (a > b && a > c) {
-                maxValue += a;
-            } else if (b > a && b > c) {
-                maxValue += b;
-            } else if (c > a && c > b) {
-                maxValue += c;
+        if (a == 1 && c == 1) {
+            maxValue = a + b + c;
+        } else if (a == 1 || b == 1 || c == 1) {
+            if (a == 1) {
+                maxValue = (a + b) * c;
+            } else if (b == 1 && a < c) {
+                maxValue = (a + b) * c;
             } else {
-                // all are ones
-                maxValue = 3;
+                maxValue = a * (b + c);
             }
-
+        } else {
+            maxValue = a * b * c;
         }
 
         System.out.println(maxValue);
