@@ -91,6 +91,16 @@ Points = (x-y)
                         = K(N-M)/ K(K-1)
                         = (N-M)/(K-1)
 
+                It will give decimal answer sometimes but we can ignore that because if explore the origin of the above formula
+                that is, (N/K) - (M-(N/K))/(K-1) in which (N/K) will always give a perfect integer as stated in question.
+                So, the decimal part is coming due to other part that is y.
+                And y is the the second heighest number of jokers in any player and nnumber of jokers cannot be in decimal.
+                So for example if we have to divide 3 joker between 2 players than one will get 2 and other will get 1.
+
+                And since we are considering maximum we will take 2. but in the formula we are subtracting 1.5 by assuming the jokers are 
+                equally dicided so if at last the number cmes in the form of decimal then we will ignore because that 0.5 will go to one of 
+                the player and make it second player having max number of joker.
+
     CASE 2 :   number of cards each player hold >= total number of joker
 
                In this case, for max points any one player will have all the jokers that is M.
