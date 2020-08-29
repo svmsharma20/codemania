@@ -1,3 +1,65 @@
+/*
+
+Three Integers => https://codeforces.com/problemset/problem/1311/D
+
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given three integers a≤b≤c.
+
+In one move, you can add +1 or −1 to any of these integers (i.e. increase or decrease any number by one). You can perform such operation any (possibly, zero) number of times, you can even perform this operation several times with one number. Note that you cannot make non-positive numbers using such operations.
+
+You have to perform the minimum number of such operations in order to obtain three integers A≤B≤C such that B is divisible by A and C is divisible by B.
+
+You have to answer t independent test cases.
+
+Input
+The first line of the input contains one integer t (1≤t≤100) — the number of test cases.
+
+The next t lines describe test cases. Each test case is given on a separate line as three space-separated integers a,b and c (1≤a≤b≤c≤104).
+
+Output
+For each test case, print the answer. In the first line print res — the minimum number of operations you have to perform to obtain three integers A≤B≤C such that B is divisible by A and C is divisible by B. On the second line print any suitable triple A,B and C.
+
+Example
+input
+8
+1 2 3
+123 321 456
+5 10 15
+15 18 21
+100 100 101
+1 22 29
+3 19 38
+6 30 46
+
+output
+1
+1 1 3
+
+102
+114 228 456
+
+4
+4 8 16
+
+6
+18 18 18
+
+1
+100 100 100
+
+7
+1 22 22
+
+2
+1 19 38
+
+8
+6 24 48  
+*/
+
 package edu.math.adhoc.codeforce;
 
 import java.util.Scanner;
@@ -63,8 +125,8 @@ public class ThreeIntegers_2000 {
                     int complementRemC = jB - remC;
 
                     /*
-                     * To make number we can either subtract the remainder or add a certain number
-                     * to make that number as next multiple.
+                     * To make a number divisible by another, we can either subtract the remainder
+                     * or add a certain number to the dividend to make it a multiple of divisor.
                      * 
                      * For example, if B = 20 & C = 55. To make C divisible by B we can either
                      * subtratc the remainedr that is 15 which gives us 40 which is divisible by 20.
