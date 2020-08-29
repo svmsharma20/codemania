@@ -47,11 +47,11 @@ In the third example Polycarp should buy two shovels and pay 2·15 = 30 burl
 
 */
 
-package edu.math.adhoc;
+package edu.math.adhoc.codeforce;
 
 import java.util.Scanner;
 
-public class Buy_A_Shovel {
+public class Buy_A_Shovel_800 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

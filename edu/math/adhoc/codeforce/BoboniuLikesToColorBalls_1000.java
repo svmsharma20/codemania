@@ -55,11 +55,11 @@ It is meaningless to do operation more than once because what ever value is it w
 
 */
 
-package edu.math.adhoc;
+package edu.math.adhoc.codeforce;
 
 import java.util.Scanner;
 
-public class BoboniuLikesToColorBalls {
+public class BoboniuLikesToColorBalls_1000 {
 
     static final int INPUT_SIZE = 4;
 
@@ -68,7 +68,7 @@ public class BoboniuLikesToColorBalls {
         int numberOfTestcases = sc.nextInt();
 
         int[][] inputs = new int[numberOfTestcases][INPUT_SIZE];
-        BoboniuLikesToColorBalls b = new BoboniuLikesToColorBalls();
+        BoboniuLikesToColorBalls_1000 b = new BoboniuLikesToColorBalls_1000();
         b.scanInput(inputs, sc);
         b.isPalindromPossible(inputs);
 

@@ -31,11 +31,11 @@ In the first case we cannot make a variable exceed 3 in one operation. One way o
 
 */
 
-package edu.math.adhoc;
+package edu.math.adhoc.codeforce;
 
 import java.util.Scanner;
 
-public class AddOperationOnNewProgrammingLang {
+public class AddOperationOnNewProgrammingLang_800 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

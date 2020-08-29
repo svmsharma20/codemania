@@ -41,11 +41,11 @@ output
 
 */
 
-package edu.math.adhoc;
+package edu.math.adhoc.codeforce;
 
 import java.util.Scanner;
 
-public class Expression {
+public class Expression_1000 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

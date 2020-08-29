@@ -71,11 +71,11 @@ Solution:
 
 */
 
-package edu.math.adhoc;
+package edu.math.adhoc.codeforce;
 
 import java.util.Scanner;
 
-public class Candies {
+public class Candies_900 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

@@ -38,11 +38,11 @@ In the third sample, Limak needs only 1 minute to get to the party. He has enoug
 
 */
 
-package edu.math.adhoc;
+package edu.math.adhoc.codeforce;
 
 import java.util.Scanner;
 
-public class NewYearAndHurry {
+public class NewYearAndHurry_800 {
 
     /*
      * Since the contest is starting at 20:00, there is only 4 hrs left for the New

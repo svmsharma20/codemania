@@ -18,11 +18,11 @@ outputCopy
 
 */
 
-package edu.math.adhoc;
+package edu.math.adhoc.codeforce;
 
 import java.util.Scanner;
 
-public class SoldierAndBananas {
+public class SoldierAndBananas_800 {
 
     public static void main(String[] args) {
 

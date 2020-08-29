@@ -41,11 +41,11 @@ outputCopy
 
 */
 
-package edu.math.adhoc;
+package edu.math.adhoc.codeforce;
 
 import java.util.Scanner;
 
-public class ThreePilesOfCandies {
+public class ThreePilesOfCandies_800 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

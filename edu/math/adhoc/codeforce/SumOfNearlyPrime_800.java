@@ -75,11 +75,11 @@ In the seventh test case, n=258=2⋅5+3⋅7+13⋅17+2⋅3: integers 10, 21, 221,
 
 */
 
-package edu.math.adhoc;
+package edu.math.adhoc.codeforce;
 
 import java.util.Scanner;
 
-public class SumOfNearlyPrime {
+public class SumOfNearlyPrime_800 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
