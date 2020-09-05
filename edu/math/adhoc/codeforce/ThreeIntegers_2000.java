@@ -107,14 +107,14 @@ public class ThreeIntegers_2000 {
              * between 1 and A, And since 1 divides every number, we can say atmost A number
              * of subtractions we need to perform to get a number which can divide B
              * totally. But, there can be another number which is between A and (2*A) which
-             * can divide B and needed operations. Like in case 2 above. Therefore we are
-             * checking upto 2*A.
+             * can divide B and needed less operations. Like in case 2 above. Therefore we
+             * are checking upto 2*A.
              * 
              */
             for (int iA = 1; iA <= 2 * a; iA++) {
                 /*
                  * Same explanation for range as A just once change since B should be either
-                 * equal to or greater than A we are starting from A and going upto 2*B.
+                 * equal to or greater than A So, we are starting from A and going upto 2*B.
                  * 
                  * Also, since we want a multiple of A we are incrementing B by A factor.
                  */
@@ -135,7 +135,7 @@ public class ThreeIntegers_2000 {
                      * 
                      * We can add 5 to make it 60 which is again divisible by 20.
                      * 
-                     * How to did 5 came: ( B-(C % B) )=> (20 - (55 % 20)) => (20 - 15) => 5
+                     * How did 5 came: ( B-(C % B) )=> (20 - (55 % 20)) => (20 - 15) => 5
                      */
                     if (remC < complementRemC && (c - remC >= jB)) {
                         kC = c - remC;
