@@ -45,7 +45,7 @@ public class SqrtUsingBitManipulation {
      * 
      * After adding 2 to 8 we get 100. now we check if 10^2 > 110.
      * 
-     * No, then we keep this bit and can move forward.
+     * No, then we can keep this bit and can move forward.
      * 
      * Now ans can be {10, 11}.
      * 
