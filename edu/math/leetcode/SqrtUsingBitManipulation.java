@@ -4,6 +4,8 @@ package edu.math.leetcode;
 *   Note:- This program only provide square root at integer level which means the decimal plcaes will not be there.
 *           sqrt(100) = 10
 *           sqrt(110) = 10
+* 
+*   Ref:- https://leetcode.com/problems/sqrtx/discuss/25048/Share-my-O(log-n)-Solution-using-bit-manipulation/24082
 */
 
 public class SqrtUsingBitManipulation {
