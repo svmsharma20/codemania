@@ -8,7 +8,7 @@ package edu.math.leetcode;
 *   Ref:- https://leetcode.com/problems/sqrtx/discuss/25048/Share-my-O(log-n)-Solution-using-bit-manipulation/24082
 */
 
-public class SqrtUsingBitManipulation {
+public class FloorOfSqrtUsingBitManipulation {
     public static void main(String[] args) {
         System.out.println(sqrt(110));
     }
