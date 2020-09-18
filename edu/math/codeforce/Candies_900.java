@@ -71,7 +71,7 @@ Solution:
 
 */
 
-package edu.math.adhoc.codeforce;
+package edu.math.codeforce;
 
 import java.util.Scanner;
 

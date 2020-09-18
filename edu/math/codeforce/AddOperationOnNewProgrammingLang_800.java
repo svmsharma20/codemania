@@ -31,7 +31,7 @@ In the first case we cannot make a variable exceed 3 in one operation. One way o
 
 */
 
-package edu.math.adhoc.codeforce;
+package edu.math.codeforce;
 
 import java.util.Scanner;
 

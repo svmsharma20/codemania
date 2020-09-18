@@ -60,7 +60,7 @@ output
 6 24 48  
 */
 
-package edu.math.adhoc.codeforce;
+package edu.math.codeforce;
 
 import java.util.Scanner;
 

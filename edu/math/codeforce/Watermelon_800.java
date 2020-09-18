@@ -20,7 +20,7 @@ For example, the boys can divide the watermelon into two parts of 2 and 6 kilos 
 
 */
 
-package edu.math.adhoc.codeforce;
+package edu.math.codeforce;
 
 import java.util.Scanner;
 

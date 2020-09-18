@@ -38,7 +38,7 @@ In the third sample, Limak needs only 1 minute to get to the party. He has enoug
 
 */
 
-package edu.math.adhoc.codeforce;
+package edu.math.codeforce;
 
 import java.util.Scanner;
 

@@ -75,7 +75,7 @@ In the seventh test case, n=258=2⋅5+3⋅7+13⋅17+2⋅3: integers 10, 21, 221,
 
 */
 
-package edu.math.adhoc.codeforce;
+package edu.math.codeforce;
 
 import java.util.Scanner;
 

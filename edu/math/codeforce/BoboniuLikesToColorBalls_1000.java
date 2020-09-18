@@ -55,7 +55,7 @@ It is meaningless to do operation more than once because what ever value is it w
 
 */
 
-package edu.math.adhoc.codeforce;
+package edu.math.codeforce;
 
 import java.util.Scanner;
 
