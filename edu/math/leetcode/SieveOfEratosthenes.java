@@ -2,6 +2,10 @@ package edu.math.leetcode;
 
 import java.util.Scanner;
 
+/*  
+*   Time complexity = n/2 + n/3 + n/5 + n/7 + n/11 + . . . = O(nlog(log(n)))  
+*/
+
 public class SieveOfEratosthenes {
 
     public static void main(String[] args) {
