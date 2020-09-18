@@ -3,7 +3,10 @@ package edu.math.leetcode;
 import java.util.Scanner;
 
 /*   
-*   Ref: https://www.math.ubc.ca/~anstee/math104/104newton-solution.pdf
+*   Ref:  https://www.geeksforgeeks.org/program-for-newton-raphson-method/
+*         https://www.math.ubc.ca/~anstee/math104/104newton-solution.pdf
+*   
+*   Complexity: https://en.citizendium.org/wiki/Newton's_method#Computational_complexity
 */
 
 public class SqrtUsingNewtonRaphsonMethod {
