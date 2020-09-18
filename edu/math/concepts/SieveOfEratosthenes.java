@@ -1,4 +1,4 @@
-package edu.math.leetcode;
+package edu.math.concepts;
 
 import java.util.Scanner;
 
