@@ -12,15 +12,16 @@ public class EulerToitentFor_1_to_N {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        int[] phi = getAllPhiFromOneToN(n);
+        int[] phi = printAllPhiFromOneToN(n);
 
         for (int i = 1; i < phi.length; i++) {
             System.out.println(i + " - " + phi[i] + " ");
         }
+
         sc.close();
     }
 
-    static int[] getAllPhiFromOneToN(int n) {
+    static int[] printAllPhiFromOneToN(int n) {
         int[] phi = new int[n + 1];
 
         phi[0] = 0;
@@ -33,7 +34,7 @@ public class EulerToitentFor_1_to_N {
         for (int i = 2; i <= n; i++) {
             if (phi[i] == i) {
                 for (int j = i; j <= n; j += i) {
-                    phi[j] = phi[j] - (phi[j] / j);
+                    phi[j] = phi[j] - (phi[j] / i);
                 }
             }
         }
