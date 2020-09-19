@@ -1,3 +1,7 @@
+/*  
+*   Time complexity = O(nloglogn) 
+*/
+
 package edu.math.concepts;
 
 import java.util.Scanner;
