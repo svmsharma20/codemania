@@ -37,6 +37,9 @@ public class DivideTwoInteger {
 
         while ((a - b) >= 0) {
             int pow = 0;
+            /*
+             * n<<k  = n*(2^k) and, n>>k  = n/(2^k)
+             */
             while (a > (b << 1 << pow)) {
                 pow++;
             }
