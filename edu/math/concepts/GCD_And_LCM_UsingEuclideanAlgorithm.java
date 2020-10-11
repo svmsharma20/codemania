@@ -7,14 +7,14 @@ package edu.math.concepts;
 
 import java.util.Scanner;
 
-public class GCDUsingEuclideanAlgorithm {
+public class GCD_And_LCM_UsingEuclideanAlgorithm {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        System.out.println(gcd(a,b));
-
+        System.out.println(String.format("GCD of (%s,%s) : %s",a,b,gcd(a,b)));
+        System.out.println(String.format("LCM of (%s,%s) : %s",a,b,lcm(a,b)));
         sc.close();
     }
 
@@ -29,4 +29,8 @@ public class GCDUsingEuclideanAlgorithm {
         }
         return a;
     }   
+
+    static int lcm(int a, int b){
+        return (a*b)/gcd(a, b);
+    }
 }
