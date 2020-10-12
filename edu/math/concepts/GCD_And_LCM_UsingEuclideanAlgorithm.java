@@ -14,6 +14,7 @@ public class GCD_And_LCM_UsingEuclideanAlgorithm {
         int b = sc.nextInt();
 
         System.out.println(String.format("GCD of (%s,%s) : %s",a,b,gcd(a,b)));
+        System.out.println(String.format("GCD using recurssion (%s,%s) : %s",a,b,gcdRecursive(a,b)));
         System.out.println(String.format("LCM of (%s,%s) : %s",a,b,lcm(a,b)));
         sc.close();
     }
@@ -32,5 +33,12 @@ public class GCD_And_LCM_UsingEuclideanAlgorithm {
 
     static int lcm(int a, int b){
         return (a*b)/gcd(a, b);
+    }
+
+    static int gcdRecursive(int a, int b){
+        if(b == 0)
+            return a;
+
+        return gcdRecursive(b, a%b);    
     }
 }
