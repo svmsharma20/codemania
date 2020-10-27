@@ -27,7 +27,7 @@ public class SubarrayWithGivenSum {
                 
 		    }
 		    boolean isFound = false;
-		    while(j<a.length){
+		    while(j<=a.length){
 		        if(sum==s){
                     System.out.println(String.format("%d %d",i+1,j));
                     isFound = true;
