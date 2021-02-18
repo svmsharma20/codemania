@@ -2,7 +2,7 @@ package edu.array;
 
 public class MaximumSumSubArrayUsingDivideAndConquer {
     public static void main(String[] args) {
-        int[] array = {5, -3, 2, -1, -2, 6, -5, -3};
+        // int[] array = {5, -3, 2, -1, -2, 6, -5, -3};
         // System.out.println("Max: "+getMax(array));
 
         System.out.println(uniquePaths(3, 7));
