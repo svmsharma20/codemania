@@ -54,14 +54,12 @@ public class KadanesAlgorithm {
         int sum = 0;
         int max = Integer.MIN_VALUE;
         int index = -1;
-        int counter = 0;
-
+        
         for (int i = 0; i < arr.length; i++) {
             sum += arr[i];
             if(sum>max){
                 index = i;
                 max = sum;
-                counter++;
             }
             if(sum<0){
                 sum = 0;

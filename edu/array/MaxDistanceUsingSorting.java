@@ -1,8 +1,10 @@
+/*
+*  Time complexity => O(nlogn)
+*/
+
 package edu.array;
 
-// import java.util.ArrayList;
-
-public class MaxDistance {
+public class MaxDistanceUsingSorting {
 
     public static void main(String[] args) {
         int[] arr = {1, 10, 5, 8, 2};
@@ -14,7 +16,7 @@ public class MaxDistance {
             indices[i] = i;    
         }
 
-        new MaxDistance().sort(arr, indices, 0, arr.length-1);
+        new MaxDistanceUsingSorting().sort(arr, indices, 0, arr.length-1);
 
         // for(int i=0; i<n; i++){
         //     System.out.print(arr[i]+" ");    
