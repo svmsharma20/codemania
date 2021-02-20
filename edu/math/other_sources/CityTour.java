@@ -30,7 +30,7 @@ public class CityTour {
         while(i<citiesAlreadyVisited.length){
             citiesInBetween = citiesAlreadyVisited[i] - previousCity - 1;
             result = ( result * (getModuloMultiplicativeInverse(getFactorial(citiesInBetween)))%MODULO) % MODULO;
-            result = ( result * (pow(2, citiesInBetween-1))%MODULO ) %MODULO;
+            result = ( result * (power(2, citiesInBetween-1))%MODULO ) %MODULO;
             previousCity = citiesAlreadyVisited[i];
             i++;
         }
@@ -45,10 +45,10 @@ public class CityTour {
     }
     
     private long getModuloMultiplicativeInverse(long a){
-        return pow(a, MODULO-2);
+        return power(a, MODULO-2);
     }
     
-    private long pow(long a, long n){
+    private long power(long a, long n){
         long res = 1;
         long pow = a;
         
