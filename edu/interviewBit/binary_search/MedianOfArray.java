@@ -13,7 +13,7 @@ import java.util.Arrays;
 5)  Let say y1 is the last value in B and y2 is next larger to y1 in B.
 6)  Condition for median is:
        (a) x1 is the median if:   y1<x1<y2 (x1 is greater than y1, but, smaller than y2 )
-	   (b) y1 is the median if:   x1<y1<x2 (y1 is greater than x1, but, smaller than x2 )
+        (b) y1 is the median if:   x1<y1<x2 (y1 is greater than x1, but, smaller than x2 )
 7)  For condition (a) and (b)	
         if x1>y2 that means y2 will come first and later x1 will come, if A and B are merged in sorted form. 
         In other words A will contribute less in left half so lets minimize the A's contribution
@@ -98,6 +98,11 @@ public class MedianOfArray {
         *   0 or all of its values to the left half of A ∪ B.
         */
         int aMinCount = 0;
+
+        /*
+        *   If half of the combined two array is greater than the total size of A,
+        *   than atmost A can contribute is equal to aLen.
+        */
         int aMaxCount = (leftHalfLen <=aLen) ? leftHalfLen : aLen;
 
         while(aMinCount <= aMaxCount){
