@@ -1,4 +1,4 @@
-package edu.binary_search.interview_bit;
+package edu.interviewBit.binary_search;
 
 public class MatrixMedian {
     
