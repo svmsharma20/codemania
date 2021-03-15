@@ -22,9 +22,9 @@ public class ModularMultiplicativeInverse {
 
         while(n>0){
             if((n&1)!=0){
-                res = ((res % modulo) * (pow % modulo)) % modulo;
+                res = (res * pow ) % modulo;
             }
-            pow = ((pow % modulo) * (pow % modulo)) % modulo;
+            pow = (pow * pow) % modulo;
             n = n>>1;
         }
         return res;
