@@ -1,4 +1,4 @@
-package edu.interviewBit.Strings;
+package edu.interviewBit.string;
 
 public class ImplementStrStr {
     

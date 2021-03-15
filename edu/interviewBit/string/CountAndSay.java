@@ -1,4 +1,4 @@
-package edu.interviewBit.Strings;
+package edu.interviewBit.string;
 
 // https://www.interviewbit.com/problems/count-and-say/
 
