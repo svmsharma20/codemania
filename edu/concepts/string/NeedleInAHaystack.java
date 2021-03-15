@@ -16,6 +16,10 @@ public class NeedleInAHaystack {
         String haystack = "coding is complete fun";
         String needle = "co";
 
+        /*
+            Output = 0 10
+        */
+
         if(needle.length()==0 || needle.length()>haystack.length()){
             System.out.print(-1);
             return ;
