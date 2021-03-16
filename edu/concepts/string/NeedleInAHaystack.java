@@ -1,11 +1,10 @@
 package edu.concepts.string;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class NeedleInAHaystack {
 
-    private static final long MOD = 1000000007;
+    private static final long MOD = 1000000009;
     private static final int prime = 31;
 
     private ArrayList<Long> haystackHash = new ArrayList<>();

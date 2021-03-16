@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class RabinKarpAlgorithm {
 
     private static final long prime = 31;
-    private static final long MODULO = 1000000007L;
+    private static final long MODULO = 1000000009L;
 
     ArrayList<Long> haystackHashPrefix = new ArrayList<>();
     ArrayList<Long> primePowers = new ArrayList<>();
