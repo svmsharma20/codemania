@@ -1,4 +1,4 @@
-package edu.interviewBit.string;
+package edu.concepts.string;
 
 public class ManachersAlgorithm {
 
