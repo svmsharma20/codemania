@@ -6,6 +6,7 @@ public class ManachersAlgorithm {
 
     public static void main(String[] args) {
         String str = "cybabxzxbaza";
+    //  String str = "abb";
         System.out.println(getLongestPalindromicSubstring(str.toCharArray()));
     }
 
@@ -35,7 +36,7 @@ public class ManachersAlgorithm {
         int maxLength = Integer.MIN_VALUE;
 
         for (int i = 0; i < d.length; i++) {
-            if(inputArr[i]!='#' && d[i]>maxLength){
+            if(d[i]>maxLength){
                 maxLength = d[i];
                 index = i;
             }
