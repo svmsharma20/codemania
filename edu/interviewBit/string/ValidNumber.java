@@ -8,6 +8,7 @@ public class ValidNumber {
     private static boolean isStatesInitialized = false;
 
     private static State START_STATE = new State();
+    private static State PLUS_STATE = new State();
     private static State MINUS1_STATE = new State();
     private static State MINUS2_STATE = new State();
     private static State DOT1_STATE = new State();
@@ -19,7 +20,7 @@ public class ValidNumber {
     private static State INVALID_STATE = new State();
 
     public static void main(String[] args) {
-        String[] nums = {"-1.2", "0001234", "-1234", "12e34", "-1.2e-34", "1234",
+        String[] nums = {"-1.2", "+1.2", "0001234", "-1234", "12e34", "-1.2e-34", "1234",
                     "12.34", "-12.34", "abc", "1 a", "3.", "100L"};
         for(String n : nums){
             System.out.println(n + " => " +isValidNumber(n));
@@ -52,6 +53,9 @@ public class ValidNumber {
            case '-':
                return InputType.MINUS;
 
+           case '+':
+               return InputType.PLUS;
+
            case '.':
                return InputType.DOT;
 
@@ -81,6 +85,7 @@ public class ValidNumber {
             outgoingMap.put(InputType.MINUS, MINUS1_STATE);
             outgoingMap.put(InputType.DIGITS, DIGIT1_STATE);
             outgoingMap.put(InputType.DOT, DOT1_STATE);
+            outgoingMap.put(InputType.PLUS, PLUS_STATE);
             outgoingMap.put(InputType.INVALID, INVALID_STATE);
             START_STATE.setOutgoingMap(outgoingMap);
             START_STATE.setIsFinalState(false);
@@ -92,6 +97,12 @@ public class ValidNumber {
             outgoingMap.put(InputType.INVALID,INVALID_STATE);
             MINUS1_STATE.setOutgoingMap(outgoingMap);
             MINUS1_STATE.setIsFinalState(false);
+
+            // initialize plus state with outgoing map
+            outgoingMap.put(InputType.DIGITS,DIGIT1_STATE);
+            outgoingMap.put(InputType.INVALID,INVALID_STATE);
+            PLUS_STATE.setOutgoingMap(outgoingMap);
+            PLUS_STATE.setIsFinalState(false);
 
             outgoingMap = new HashMap<>();
 
@@ -163,7 +174,8 @@ public class ValidNumber {
         MINUS,
         DOT,
         EXPONENTIAL,
-        INVALID
+        INVALID,
+        PLUS;
     }
 
     static class State {
