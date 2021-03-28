@@ -21,7 +21,9 @@ public class ManachersAlgorithm {
         int right=0;
 
         for(int i=1; i<inputArr.length; i++){
+
             int k = (i>right) ? 1 : ( Math.min(d[left+right-i], right-i+1));
+
             while(0 <= i-k && i+k<d.length && inputArr[i-k] == inputArr[i+k]){
                 k++;
             }
