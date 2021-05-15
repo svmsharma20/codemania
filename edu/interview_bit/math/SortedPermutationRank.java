@@ -21,7 +21,7 @@ public class SortedPermutationRank {
             if(check[i]==-1){
                 continue;
             }else if (str.charAt(index)!=s.charAt(i)){
-                pos = (pos%1000003 + factMap.get(len-index-1)%1000003)%1000003;
+                pos = (pos + factMap.get(len-index-1))%1000003;
             }else{
                 index++;
                 check[i]=-1;

@@ -3,139 +3,143 @@ package edu.interview_bit.math;
 import java.util.ArrayList;
 
 public class NumbersOfLengthNAndValueLessThanK {
+
+    public static void main(String[] args) {
+        int[] arr = { 0, 1, 3, 4, 6, 7 };
+        int len = 4;
+        int num = 59172;
+
+        ArrayList<Integer> arrList = new ArrayList<>();
+        for (int n : arr) {
+            arrList.add(n);
+        }
+
+        System.out.println(new NumbersOfLengthNAndValueLessThanK().solve(arrList, len, num));
+    }
+
     // https://www.youtube.com/watch?v=MT8zeLak_bI&t=1048s
     public int solve(ArrayList<Integer> A, int len, int maxNum) {
+
         if(A==null || A.size()==0){
             return 0;
         }
-        
-        int[] digits = new int[A.size()];
-        
-        for(int i=0; i<A.size(); i++){
-            digits[i] = A.get(i);
+
+        int temp=maxNum;
+        int lenOfMaxNum=0;
+        int ans=0;
+
+        while(temp>0){
+            lenOfMaxNum++;
+            temp /= 10;
         }
-        
-        
-        sort(digits, 0, digits.length-1);
-        
-        ArrayList<Integer> numList = getInetegerAsAnArray(maxNum);
-        int ans =0;
-        
-        if(len>numList.size()){
+
+        if(len>lenOfMaxNum){
             return 0;
-        }else if(len<numList.size()){
-            
-            if(len==1){
-                for(int i=0; i<digits.length; i++){
-                    if(digits[i]<maxNum){ans++;}
+        }else if(len<lenOfMaxNum){
+            if(A.get(0)==0){
+                ans = (A.size()-1) * pow(A.size(),len-1);
+                if(len==1){
+                    // if possible length is 1 then '0' is also a valid number at first and only place.
+                    ans++;
                 }
             }else{
-                if(digits[0]==0){
-                    ans = (digits.length-1)*(power(digits.length, len-1));
-                }else{
-                    ans = (digits.length)*(power(digits.length, len-1));
-                }    
+                ans = pow(A.size(), len);
             }
         }else{
+            // len == lenOfMaxNum
             if(len==1){
-                for(int i=0; i<digits.length; i++){
-                    if(digits[i]<maxNum){ans++;}
+                for(int i=0; i<A.size(); i++){
+                    if(A.get(i)<maxNum){ ans++;	}
                 }
             }else{
+                sort(A,0, A.size()-1);
+
+                // convert maxNum in array form for easy access
+                int[] numDigit = new int[lenOfMaxNum];
+                for(int i=lenOfMaxNum-1; i>=0; i--){
+                    numDigit[i] = maxNum%10;
+                    maxNum /= 10;
+                }
+
+                // count number of digits possible for first place from left
                 int count=0;
-                
-                for(int n: digits){
+                for(int n : A){
                     if(n==0){continue;}
-                    if(n>numList.get(0)){break;}
+                    if(n>numDigit[0]){break;}
                     count++;
                 }
 
-                ans = count*(power(digits.length, len-1));
+                // total numbers possible of given length starting with the first digit of maxNum.
+                // if first digit of maxNum is not present in A then smaller than that.
+                ans = count * pow(A.size(), len-1);
 
                 boolean flag = false;
                 int j=0;
-
-                for(int i=0; i<digits.length; i++){
-                    if(numList.get(0)==digits[i]){
-                        flag = true;
+                for(int i=0; i<A.size(); i++){
+                    if(A.get(i)==numDigit[j]){
+                        flag=true;
                         break;
                     }
                 }
                 j++;
+
                 while(flag && j<=len-1){
                     flag = false;
-                    int countLarger = 0;
-                    for(int i=0; i<digits.length; i++){
-                        if(digits[i]>numList.get(j)) countLarger++;
-                        if(digits[i]==numList.get(j)) flag=true;
+                    int countx = 0;
+                    for(int i=0; i<A.size(); i++){
+                        if(A.get(i)>numDigit[j]){countx++;}
+                        if(A.get(i)==numDigit[j]){flag=true;}
                     }
-                    ans -= countLarger * (power(digits.length, len-j-1));
+                    ans -= countx * pow(A.size(), len-j-1);
                     j++;
                 }
 
-                if(j==len && flag){ans--;}
+                if(j==len && flag) { ans--; }
             }
-
         }
-
         return ans;
     }
 
-    private void sort(int[] arr, int start, int end){
+    private void sort(ArrayList<Integer> list, int start, int end){
         if(start==end){
             return;
         }
 
         int mid = (start + end)/2;
-        sort(arr, start, mid);
-        sort(arr, mid+1, end);
+        sort(list, start, mid);
+        sort(list, mid+1, end);
 
         int i=start;
         int j=mid+1;
-        int k=0;
 
-        int temp[] = new int[end-start+1];
+        ArrayList<Integer> temp  = new ArrayList<>();
 
         while(i<=mid && j<=end){
-            if(arr[i]<= arr[j]){
-                temp[k] = arr[i];
+            if(list.get(i)<= list.get(j)){
+                temp.add(list.get(i));
                 i++;
             }else{
-                temp[k] = arr[j];
+                temp.add(list.get(j));
                 j++;
             }
-            k++;
         }
 
         while(i<=mid){
-            temp[k] = arr[i];
+            temp.add(list.get(i));
             i++;
-            k++;
         }
 
         while(j<=end){
-            temp[k] = arr[j];
+            temp.add(list.get(j));
             j++;
-            k++;
         }
 
-        for (int p =0, q=start; p < temp.length && q<=end; p++, q++) {
-            arr[q] =  temp[p];
+        for (int p =0, q=start; p < temp.size() && q<=end; p++, q++) {
+            list.set(q,temp.get(p));
         }
     }
 
-    private ArrayList<Integer> getInetegerAsAnArray(int n){
-        ArrayList<Integer> l = new ArrayList<>();
-        while(n>0){
-            int rem = n%10;
-            l.add(0, rem);
-            n /= 10;
-        }
-
-        return l;
-    }
-
-    private int power(int a, int n){
+    private int pow(int a, int n){
         int res=1;
         int pow = a;
         while(n>0){

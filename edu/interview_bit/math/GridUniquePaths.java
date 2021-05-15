@@ -1,6 +1,11 @@
 package edu.interview_bit.math;
 
 public class GridUniquePaths {
+
+    public static void main(String[] args) {
+        System.out.println(new GridUniquePaths().uniquePathUsingCombinatrics(15, 9));
+    }
+
     public int uniquePaths(int A, int B) {
         
         int[][] matrix = new int[A][B];
@@ -21,5 +26,18 @@ public class GridUniquePaths {
         
         return matrix[A-1][B-1];
         
+    }
+
+    public int uniquePathUsingCombinatrics(int A, int B){
+        // https://www.youtube.com/watch?v=t_f0nwwdg5o
+
+        int N = A+B-2;
+        int r = A-1;
+        double result = 1;
+
+        for(int i=1; i<=r; i++){
+            result = (result * (N-r+i))/i;
+        }
+        return (int)result;
     }
 }

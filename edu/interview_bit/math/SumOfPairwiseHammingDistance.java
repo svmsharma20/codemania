@@ -12,11 +12,10 @@ public class SumOfPairwiseHammingDistance {
         long ans = 0;
         
         /*
-        *   Lets see digits at each place one by one 
-        *   of all the numbers.
+        *   Lets see digits at each place one by one of all the numbers
         *   Count how many have 1's at the jth place in their bitwise representation 
          */
-         int flag = 1;
+        int flag = 1;
         for(int j=0; j<31; j++){
             count=0;
             for(int i=0; i<n; i++){
