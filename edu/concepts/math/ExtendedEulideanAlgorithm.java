@@ -23,7 +23,7 @@ public class ExtendedEulideanAlgorithm {
     }
 
     /*
-    *   0th index represents gcd of a abd b
+    *   0th index represents gcd of a and b
     *   1st index represents x coefficient that is coefficient of a
     *   2nd index represents y coefficient that is coefficient of b
     */
