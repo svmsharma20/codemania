@@ -23,9 +23,9 @@ public class MaximumConsecutiveGap {
             min = (n<min)? n : min;
         }
         
-        int gap = (int)Math.ceil((max-min)/(size-1.0));
+        int minGap = (int)Math.ceil((max-min)/(size-1.0));
         
-        if(gap==0){
+        if(minGap==0){
             return 0;
         }
         
@@ -37,15 +37,14 @@ public class MaximumConsecutiveGap {
             bucket[i][0] = Integer.MAX_VALUE;
             bucket[i][1] = Integer.MIN_VALUE;
         }
-        
-        
+
         for(Integer n : set){
             
             if(n==min || n==max){
                 continue;
             }
             
-            int interval = (n-min)/gap;
+            int interval = (n-min)/minGap;
             bucket[interval][0] = Math.min(n, bucket[interval][0]);
             bucket[interval][1] = Math.max(n, bucket[interval][1]);
         }
