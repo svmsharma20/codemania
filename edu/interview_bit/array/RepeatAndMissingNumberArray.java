@@ -1,7 +1,8 @@
 package edu.interview_bit.array;
 
 public class RepeatAndMissingNumberArray {
-    
+
+    // https://www.youtube.com/watch?v=5nMGY4VUoRY
     public int[] repeatedNumber(final int[] A) {
         
         long sum = 0, sumSquares = 0;

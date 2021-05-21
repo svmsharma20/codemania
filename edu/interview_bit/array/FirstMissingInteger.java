@@ -12,7 +12,7 @@ public class FirstMissingInteger {
                 A.set(i, temp);
             }
         }
-        
+
         for(int i=0; i<A.size(); i++){
             if(i!=A.get(i)-1){
                 return i+1;
