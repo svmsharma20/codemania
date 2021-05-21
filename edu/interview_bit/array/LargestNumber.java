@@ -29,7 +29,9 @@ public class LargestNumber {
         
         return num;
     }
-    
+    /*
+    * Sort the numbers in decreasing order
+    * */
     public void sort(String[] s, int start, int end){
         if(start==end){
             return;
