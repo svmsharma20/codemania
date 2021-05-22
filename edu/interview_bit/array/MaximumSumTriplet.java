@@ -4,7 +4,9 @@ import java.util.TreeSet;
 import java.util.ArrayList;
 
 public class MaximumSumTriplet {
-    
+
+    // https://www.youtube.com/watch?v=l_hPdol4CSU&t=932s
+
     public int solve(ArrayList<Integer> A) {
         if(A==null || A.size()<3){
             return 0;
