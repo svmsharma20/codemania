@@ -25,7 +25,7 @@ public class MatrixMedian {
        * It divides all the numbers in two equals parts when they are in their sorted form.
        *
        * Also, in case where total numbers are odd, the position of the median tells us how many elements are there to its left and,
-       *  how many are at its right.
+       * how many are at its right. It will be (position-1) elements to left and (position-1) elements to right.
        *
        * For e.g.: In case of (3 X 5) matrix; total number are: 15
        * and the position of the middle element is = (15+1)/2 = 8
