@@ -33,7 +33,7 @@ public class MatrixMedian {
        * So, there will be 7 elements to the left of the median(1 to 7)
        * and there will be 7 elements to the right of the median(9 to 15)
        *
-       * So we can say that number of elements to the left if median is (position of the median -1).
+       * So we can say that number of elements to the left is (position of the median -1) in case when total numbers are odd.
        *
        * desiredIndexOfTheMedian represents the index of the median when the matrix is converted into a sorted array form.
        * */
@@ -51,14 +51,14 @@ public class MatrixMedian {
             * If the number of variables smaller than the mid is less than the desiredIndexOfTheMedian,
             * It tells us that mid does not divides the array equally
             * and, there are less numbers to the left of mid as compare to right of mid
-            * and so median lies in the right section(that is, mid to max).
+            * and so median lies in the right section(that is, between mid to max).
             *
             * And, the viceversa also,
             *
             * If the number of variables more than the mid is less than the desiredIndexOfTheMedian,
             * It tells us that mid does not divides the array equally
             * and, there are more numbers to the left of mid as compare to right of mid
-            * and so median lies in the left section(that is, mid to max).
+            * and so median lies in the left section(that is, between mid to max).
             * */
             if(count<desiredIndexOfTheMedian){
                 min = mid+1;
