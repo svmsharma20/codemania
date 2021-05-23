@@ -22,7 +22,7 @@ public class Flip {
         
         for(int i=0; i<A.length(); i++){
             
-            // max count of after flipping = max(max count of '0' - min count of '1'
+            // max count of after flipping = max(max count of '0' - min count of '1')
             
             if(A.charAt(i)=='0'){
                 count++;
