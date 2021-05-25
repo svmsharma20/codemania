@@ -13,8 +13,9 @@ public class ImplementPowerFunction {
 	    if(x==0){
 	        return 0;
 	    }
-	    
-	    boolean isNeg = (x<0)?true:false;
+
+	    // Because If n is even the x^n will be positive
+	    boolean isNeg = (x<0 && n%2==1)?true:false;
 	    long num = Math.abs(x);
 	    int exp = n;
 	    long power = 1;
@@ -28,7 +29,7 @@ public class ImplementPowerFunction {
 	        exp >>= 1;
 	    }
 	    
-	    if(isNeg && n%2==1){
+	    if(isNeg){
 	        int i=1;
 	        while(mod<power){
 	            i++;
