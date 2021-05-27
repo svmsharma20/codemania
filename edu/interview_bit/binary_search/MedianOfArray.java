@@ -107,11 +107,7 @@ public class MedianOfArray {
 
         while(aMinCount <= aMaxCount){
             int aCount = aMinCount + (aMaxCount-aMinCount)/2;
-            
-            // if(aCount>aLen){
-            //     aCount=aLen;
-            // }
-            
+
             int bCount = leftHalfLen-aCount;
 
             /*
@@ -178,7 +174,7 @@ public class MedianOfArray {
                 /*
                 *   aLen + bLen is even. To compute the median, we need to find 
                 *   the first element in the right half, which will be the smaller 
-                *   of xP and yP. Remember that either xP or yP can be null (if all 
+                *   of x2 and y2. Remember that either x2 or y2 can be null (if all
                 *   the values of A or B are in the left half).
                 */
                 double rightHalfStart = (Double.isNaN(x2)) ? y2 
