@@ -23,5 +23,15 @@ public class LinkListUtility {
              System.out.print(node.val+" ");
              node = node.next;
          }
-     }
+    }
+
+    public static String getStringValue(ListNode node){
+      String list = "[";
+      while(node!=null){
+        list += node.val+" ";
+        node = node.next;
+      }
+      list += "]";
+      return list;
+    }
 }
