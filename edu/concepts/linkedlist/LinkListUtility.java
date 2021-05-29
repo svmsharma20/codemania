@@ -34,4 +34,23 @@ public class LinkListUtility {
       list += "]";
       return list;
     }
+
+  public static ListNode reverse(ListNode head) {
+    if(head==null || head.next==null){
+      return head;
+    }
+
+    ListNode prev = null;
+    ListNode current = head;
+    ListNode next = head.next;
+
+    while(current!=null){
+      current.next = prev;
+      prev = current;
+      current = next;
+      next = next!=null ? next.next : next;
+    }
+
+    return prev;
+  }
 }
