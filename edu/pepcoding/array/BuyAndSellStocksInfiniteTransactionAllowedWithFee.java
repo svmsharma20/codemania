@@ -21,17 +21,16 @@ public class BuyAndSellStocksInfiniteTransactionAllowedWithFee {
   }
 
   private static int getMaxProfit(int[] stocks, int fee) {
-    final int BUY_STATE_PROFIT = 0;
-    final int SELL_STATE_PROFIT = 1;
-
-    int dp[][] = new int[stocks.length][2];
-    dp[0][BUY_STATE_PROFIT] = stocks[0]*(-1);
+    int bsp = -stocks[0];
+    int ssp = 0;
 
     for (int i = 1; i < stocks.length; i++) {
-        dp[i][BUY_STATE_PROFIT] = Math.max(dp[i-1][BUY_STATE_PROFIT], dp[i-1][SELL_STATE_PROFIT] - stocks[i]);
-        dp[i][SELL_STATE_PROFIT] = Math.max(dp[i-1][SELL_STATE_PROFIT], stocks[i] + dp[i-1][BUY_STATE_PROFIT] - fee);
+        int nbsp = Math.max(bsp, ssp - stocks[i]);
+        int nssp = Math.max(ssp, stocks[i] + bsp - fee);
+        bsp = nbsp;
+        ssp = nssp;
     }
 
-    return dp[stocks.length-1][SELL_STATE_PROFIT];
+    return ssp;
   }
 }
