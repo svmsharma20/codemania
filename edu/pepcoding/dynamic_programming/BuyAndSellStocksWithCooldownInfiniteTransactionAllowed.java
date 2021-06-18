@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class BuyAndSellStocksWithCooldownInfiniteTransactionAllowed {
 
+  // https://www.pepcoding.com/resources/online-java-foundation/dynamic-programming-and-greedy/buy-and-sell-stocks-cooldown-ita-official/ojquestion
+  // https://youtu.be/GY0O57llkKQ?list=TLGGsUDzNWL-zwkxODA2MjAyMQ
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
