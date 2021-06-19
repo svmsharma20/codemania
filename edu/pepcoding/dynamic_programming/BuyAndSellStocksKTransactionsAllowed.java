@@ -37,4 +37,20 @@ public class BuyAndSellStocksKTransactionsAllowed {
     }
     return dp[k][len-1];
   }
+
+  private static int getMaxProfitWithKTransactionOptimized(int[] stocks, int k) {
+    int len = stocks.length;
+    int[][] dp = new int[k+1][len];
+
+    // t = transaction
+    // d = days
+    for (int t = 1; t <= k; t++) {
+      int max = dp[t-1][0] - stocks[0];
+      for (int d = 1; d < len; d++) {
+        dp[t][d] = Math.max(dp[t][d-1], max+stocks[d]);
+        max = Math.max(max, dp[t-1][d]-stocks[d]);
+      }
+    }
+    return dp[k][len-1];
+  }
 }
