@@ -1,4 +1,4 @@
-package edu.pepcoding.array;
+package edu.pepcoding.dynamic_programming;
 
 import java.util.Scanner;
 
