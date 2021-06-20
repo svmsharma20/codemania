@@ -23,7 +23,7 @@ public class MaximumSumIncreasingSubsequence {
     for (int i = 0; i < arr.length; i++) {
       int localMax = 0;
       for (int j = 0; j < i; j++) {
-        if(arr[j]<arr[i]){
+        if(arr[j]<=arr[i]){
           localMax = Math.max(localMax, dp[j]);
         }
       }
