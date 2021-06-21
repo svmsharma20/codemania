@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class MaximumNonOverlappingBridges {
 
+  // https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/dynamic-programming/max-non-overlapping-bridges-official/ojquestion
+  // https://www.youtube.com/watch?v=o1h3aoeSTOU&list=TLGGgByTZQF3j1oyMTA2MjAyMQ
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
