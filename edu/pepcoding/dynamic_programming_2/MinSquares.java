@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class MinSquares {
 
+  // https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/dynamic-programming/min-squares-official/ojquestion
+  // https://youtu.be/aZuQXkO0-XA?list=TLGGUoqM0XRTkmEyMjA2MjAyMQ
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
