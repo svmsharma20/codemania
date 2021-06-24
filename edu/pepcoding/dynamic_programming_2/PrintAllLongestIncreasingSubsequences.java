@@ -1,13 +1,12 @@
 package edu.pepcoding.dynamic_programming_2;
 
 import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Scanner;
 
 public class PrintAllLongestIncreasingSubsequences {
 
+  // https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/dynamic-programming/lis-re-official/ojquestion
+  // https://youtu.be/3mD20VSib5E?list=TLGGI0pCMu49NaQyNDA2MjAyMQ
   public static class Pair {
     int l;
     int i;
