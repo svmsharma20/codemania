@@ -3,6 +3,8 @@ package edu.pepcoding.dynamic_programming_2;
 import java.util.ArrayDeque;
 import java.util.Scanner;
 
+// https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/dynamic-programming/minimum-cost-path-re-official/ojquestion
+// https://youtu.be/f8Vdifn2YjQ?list=TLGGtVilyacKd-UyODA2MjAyMQ
 public class PrintAllPathsWithMinimumCost {
 
   public static void main(String[] args) {

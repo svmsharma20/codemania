@@ -1,8 +1,10 @@
 package edu.pepcoding.dynamic_programming_2;
 
-import java.io.*;
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.Scanner;
 
+// https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/dynamic-programming/goldmine-re-official/ojquestion
+// https://youtu.be/mme6Tqj8tyY?list=TLGGxxABjrcDaqUyODA2MjAyMQ
 public class PrintAllPathsWithMaximumGold {
 
   private static class Pair {

@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 
+// https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/dynamic-programming/print-all-paths-with-target-sum-subset-official/ojquestion
+// https://youtu.be/qtqMTgmDpQg?list=TLGGtX7mGU4CB-cyODA2MjAyMQ
 public class PrintAllPathsWithTargetSumSubset {
 
   public static class Pair{
