@@ -16,11 +16,13 @@ public class MinimumScoreOfTriangulation {
         } else if (g == 2) {
           dp[i][j] = arr[i] * arr[i + 1] * arr[i + 2];
         } else {
-          int base = arr[i] * arr[j];
           int minCost = Integer.MAX_VALUE;
 
           for (int k = i + 1; k < j; k++) {
-            int cost = base * arr[k] + dp[i][k] + dp[k][j];
+            int tri = arr[i] * arr[j] * arr[k];
+            int left = dp[i][k];
+            int right = dp[k][j];
+            int cost = tri + left + right;
             minCost = Math.min(minCost, cost);
           }
 
