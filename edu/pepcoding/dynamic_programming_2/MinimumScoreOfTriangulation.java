@@ -2,6 +2,8 @@ package edu.pepcoding.dynamic_programming_2;
 
 import java.util.Scanner;
 
+// https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/dynamic-programming/minimum-score-of-triangulation-official/ojquestion
+// https://www.youtube.com/watch?v=tmIhmeL8WRo&list=TLGGic3FVQW5CkEwMjA3MjAyMQ
 public class MinimumScoreOfTriangulation {
 
   public static int minScoreTriangulation(int[] arr) {
