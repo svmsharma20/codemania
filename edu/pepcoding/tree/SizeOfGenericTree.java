@@ -1,4 +1,4 @@
-package edu.pepcoding;
+package edu.pepcoding.tree;
 
 import java.util.ArrayList;
 import java.util.Stack;
