@@ -1,4 +1,4 @@
-package edu.pepcoding.tree;
+package edu.pepcoding.tree.generic_tree;
 
 import java.util.Stack;
 

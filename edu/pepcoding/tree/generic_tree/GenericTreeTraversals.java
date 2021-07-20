@@ -1,4 +1,4 @@
-package edu.pepcoding.tree;
+package edu.pepcoding.tree.generic_tree;
 
 // https://www.pepcoding.com/resources/online-java-foundation/generic-tree/generic-tree-traversal-official/ojquestion
 // https://www.youtube.com/watch?v=YnufWAWOfI8&list=PL-Jc9J83PIiEmjuIVDrwR9h5i9TT2CEU_&index=11

@@ -1,4 +1,4 @@
-package edu.pepcoding.tree;
+package edu.pepcoding.tree.generic_tree;
 
 // https://www.pepcoding.com/resources/online-java-foundation/generic-tree/height-of-generic-tree-official/ojquestion
 public class HeightOfAGenericTree {

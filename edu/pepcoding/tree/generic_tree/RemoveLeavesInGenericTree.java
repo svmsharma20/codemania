@@ -1,4 +1,4 @@
-package edu.pepcoding.tree;
+package edu.pepcoding.tree.generic_tree;
 
 // https://www.pepcoding.com/resources/online-java-foundation/generic-tree/remove-leaves-generic-tree-official/ojquestion
 // https://www.youtube.com/watch?v=0PBC_EEBHGg&list=PL-Jc9J83PIiEmjuIVDrwR9h5i9TT2CEU_&index=22
