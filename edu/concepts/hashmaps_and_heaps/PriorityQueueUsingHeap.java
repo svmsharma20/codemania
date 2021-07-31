@@ -1,4 +1,4 @@
-package edu.concepts.tree;
+package edu.concepts.hashmaps_and_heaps;
 
 import java.util.ArrayList;
 
