@@ -30,7 +30,7 @@ public class RecoverBst {
 
     if(prev != null && prev.val > node.val){
       secondMisMatch = node;
-      if(firstMisMatch==null){
+      if(firstMisMatch == null){
         firstMisMatch = prev;
       }
     }
