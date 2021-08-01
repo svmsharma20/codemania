@@ -1,6 +1,4 @@
-package edu.pepcoding.tree.generic_tree;
-
-import java.util.Scanner;
+package edu.pepcoding.tree;
 
 public class CamerasInBinaryTree {
 
