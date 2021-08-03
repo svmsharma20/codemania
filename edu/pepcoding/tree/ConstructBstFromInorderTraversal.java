@@ -1,6 +1,6 @@
 package edu.pepcoding.tree;
 
-//https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/trees/construct-bst-from-inorder-traversal/ojquestion
+// https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/trees/construct-bst-from-inorder-traversal/ojquestion
 public class ConstructBstFromInorderTraversal {
 
   public static class TreeNode {
