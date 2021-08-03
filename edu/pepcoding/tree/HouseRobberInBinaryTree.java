@@ -1,19 +1,10 @@
 package edu.pepcoding.tree;
 
+import edu.pepcoding.tree.model.TreeNode;
 import java.util.Scanner;
 
 public class HouseRobberInBinaryTree {
   public static Scanner scn = new Scanner(System.in);
-
-  public static class TreeNode {
-    int val = 0;
-    TreeNode left = null;
-    TreeNode right = null;
-
-    TreeNode(int val) {
-      this.val = val;
-    }
-  }
 
   static class Pair {
     int sumWithRobbery;

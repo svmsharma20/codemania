@@ -1,5 +1,6 @@
 package edu.pepcoding.tree;
 
+import edu.pepcoding.tree.model.TreeNode;
 import java.util.HashMap;
 
 // https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/trees/construct-binarytree-from-preorder-and-inorder-traversal/ojquestion
@@ -7,15 +8,6 @@ public class ConstructBinarytreeFromPreorderAndInorder {
 
   static int preIndex = 0;
   static HashMap<Integer, Integer> map = new HashMap<>();
-  public static class TreeNode {
-    int val = 0;
-    TreeNode left = null;
-    TreeNode right = null;
-
-    TreeNode(int val) {
-      this.val = val;
-    }
-  }
 
   public static TreeNode buildTree(int[] preorder, int[] inorder) {
     for (int i = 0; i < inorder.length; i++) {

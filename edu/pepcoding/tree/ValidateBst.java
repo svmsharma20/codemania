@@ -1,26 +1,19 @@
 package edu.pepcoding.tree;
 
+import edu.pepcoding.tree.model.TreeNode;
+
 public class ValidateBst {
 
-  public static class NodePair{
+  public static class NodePair {
+
     boolean isValid;
     int min;
     int max;
 
-    NodePair(boolean isValid, int max, int min){
+    NodePair(boolean isValid, int max, int min) {
       this.isValid = isValid;
       this.min = min;
       this.max = max;
-    }
-  }
-
-  public static class TreeNode {
-    int val = 0;
-    TreeNode left = null;
-    TreeNode right = null;
-
-    TreeNode(int val) {
-      this.val = val;
     }
   }
 

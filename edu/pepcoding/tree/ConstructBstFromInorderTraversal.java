@@ -1,18 +1,9 @@
 package edu.pepcoding.tree;
 
+import edu.pepcoding.tree.model.TreeNode;
+
 // https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/trees/construct-bst-from-inorder-traversal/ojquestion
 public class ConstructBstFromInorderTraversal {
-
-  public static class TreeNode {
-
-    int val = 0;
-    TreeNode left = null;
-    TreeNode right = null;
-
-    TreeNode(int val) {
-      this.val = val;
-    }
-  }
 
   public static TreeNode constructFromInOrder(int[] inOrder) {
     return buildMyTree(inOrder, 0, inOrder.length - 1);

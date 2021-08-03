@@ -1,19 +1,13 @@
 package edu.pepcoding.tree;
 
+import edu.pepcoding.tree.model.TreeNode;
+
 public class LongestZigzagPathInABinaryTree {
+
   static int lp = 0;
 
-  public static class TreeNode {
-    int val = 0;
-    TreeNode left = null;
-    TreeNode right = null;
+  public static class Pair {
 
-    TreeNode(int val) {
-      this.val = val;
-    }
-  }
-
-  public static class Pair{
     int leftMaxZigZagPath;
     int rightMaxZigZagPath;
     int max;

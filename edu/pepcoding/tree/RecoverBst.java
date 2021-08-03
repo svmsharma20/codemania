@@ -1,24 +1,16 @@
 package edu.pepcoding.tree;
 
+import edu.pepcoding.tree.model.TreeNode;
+
 // https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/trees/recover-bst/ojquestion
 public class RecoverBst {
 
   static TreeNode firstMisMatch, secondMisMatch, prev;
 
-  public static class TreeNode {
-    int val = 0;
-    TreeNode left = null;
-    TreeNode right = null;
-
-    TreeNode(int val) {
-      this.val = val;
-    }
-  }
-
   public static void recoverTree(TreeNode root) {
-   TreeNode temp = firstMisMatch;
-   firstMisMatch = secondMisMatch;
-   secondMisMatch = temp;
+    TreeNode temp = firstMisMatch;
+    firstMisMatch = secondMisMatch;
+    secondMisMatch = temp;
   }
 
   public static void recoverTreeTraversal(TreeNode node) {

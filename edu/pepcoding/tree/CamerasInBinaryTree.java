@@ -1,24 +1,16 @@
 package edu.pepcoding.tree;
 
+import edu.pepcoding.tree.model.TreeNode;
+
 public class CamerasInBinaryTree {
 
   public static int cameraCount = 0;
 
-  public static class TreeNode {
-    int val = 0;
-    TreeNode left = null;
-    TreeNode right = null;
-
-    TreeNode(int val) {
-      this.val = val;
-    }
-  }
-
   /*
-  * State:
-  *   -1 : Need of camera
-  *    0 : Has camera
-  *    1 : Covered by a camera
+   * State:
+   *   -1 : Need of camera
+   *    0 : Has camera
+   *    1 : Covered by a camera
   * */
   public static int MinCamerasInBT(TreeNode root) {
     // If root asks for a camera than root have to add it itself

@@ -1,23 +1,12 @@
 package edu.pepcoding.tree;
 
+import edu.pepcoding.tree.model.TreeNode;
 import java.util.HashMap;
 
 public class ConstructBinarytreeFromLevelorderAndInorder {
 
   static HashMap<Integer, Integer> inMap = new HashMap<>();
   static HashMap<Integer, Integer> lvlMap = new HashMap<>();
-  static HashMap<Integer, Integer> inLvlMap = new HashMap<>();
-
-  public static class TreeNode {
-
-    int val = 0;
-    TreeNode left = null;
-    TreeNode right = null;
-
-    TreeNode(int val) {
-      this.val = val;
-    }
-  }
 
   public static TreeNode buildTree(int[] inorder, int[] lvlorder) {
     for (int i = 0; i < inorder.length; i++) {
