@@ -3,6 +3,7 @@ package edu.pepcoding.recursion;
 import java.util.Scanner;
 
 // https://www.pepcoding.com/resources/online-java-foundation/recursion-backtracking/n-queens-official/ojquestion
+// https://www.youtube.com/watch?v=05y82cP3bJo
 public class NQueens {
 
   public static void main(String[] args) throws Exception {
