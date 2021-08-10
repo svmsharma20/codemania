@@ -3,8 +3,15 @@ package edu.pepcoding.recursion;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+// https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/recursion-and-backtracking/combinations-i-official/ojquestion
 public class Combinations1 {
 
+  /*
+   * cb = box count
+   * tb = total boxes
+   * ssf = no of selections till now
+   * ts = total selection
+   * */
   public static void combinations(int cb, int tb, int ssf, int ts, String asf) {
     if (cb > tb) {
       if (ssf == ts) {
@@ -12,7 +19,9 @@ public class Combinations1 {
       }
       return;
     }
-    combinations(cb + 1, tb, ssf + 1, ts, asf + "i");
+    if (ssf < ts) {
+      combinations(cb + 1, tb, ssf + 1, ts, asf + "i");
+    }
     combinations(cb + 1, tb, ssf, ts, asf + "-");
   }
 
