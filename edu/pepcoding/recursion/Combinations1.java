@@ -7,10 +7,11 @@ import java.io.InputStreamReader;
 public class Combinations1 {
 
   /*
-   * cb = box count
+   * cb = current box
    * tb = total boxes
-   * ssf = no of selections till now
+   * ssf = selection so far
    * ts = total selection
+   * asf  = ans so far
    * */
   public static void combinations(int cb, int tb, int ssf, int ts, String asf) {
     if (cb > tb) {
