@@ -4,7 +4,9 @@ import java.util.Scanner;
 
 public class CountTotalSetBits {
 
+  //  https://www.youtube.com/watch?v=_o7QBzM33J0
   public static void main(String[] args) {
+
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
     System.out.println(getCountOfSetBitsWithoutMathLib(n));
