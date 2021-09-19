@@ -8,12 +8,24 @@ public class NumberOf_1_Bits {
     }
 
     private static int getOneBitCount(long num) {
-        int count=0;
-        while(num>0){
-            if((num&1)>0){
+        int count = 0;
+        while (num > 0) {
+            if ((num & 1) > 0) {
                 count++;
             }
             num >>= 1;
+        }
+
+        return count;
+    }
+
+    // more optimized way
+    public int numSetBits(long a) {
+        int count = 0;
+
+        while (a > 0) {
+            count++;
+            a = a & (a - 1);
         }
 
         return count;
