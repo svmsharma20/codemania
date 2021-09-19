@@ -21,11 +21,32 @@ public class CountTotalSetBits {
                 p++;
             }
             p--;
-            count += p*(1<<(p-1)) + (n-(1<<p)+1);
+            count += p * (1 << (p - 1)) + (n - (1 << p) + 1);
             count %= modulo;
-            n = n-(1<<p);
+            n = n - (1 << p);
 
         }
-        return (int)(count%modulo);
+        return (int) (count % modulo);
+    }
+
+    // both codes are same
+    public static int countSetBits(int n) {
+
+        int count = 0;
+        while (n > 0) {
+            int k = 1;
+            int pow = 0;
+            while (n >= k) {
+                k <<= 1;
+                pow++;
+            }
+            pow--;
+            k >>= 1;
+            count += (pow * k) / 2 + (n - k + 1);
+            n = n - k;
+        }
+
+        return count;
+
     }
 }
