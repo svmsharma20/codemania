@@ -5,7 +5,7 @@ import java.util.HashSet;
 public class ConsecutiveNumbers {
 
   public static void main(String[] args) {
-    int[] arr = {14, 13, 14, 12, 11, 15};
+    int[] arr = {10, 14, 13, 14, 12, 9};
     System.out.println(isConsecutiveConstantSpace(arr));
   }
 
@@ -35,7 +35,7 @@ public class ConsecutiveNumbers {
     int len = arr.length;
 
     while (i < arr.length) {
-      if ((arr[i] - min + 1) != i) {
+      if ((arr[i] - min + 1) % len != i) {
         int swapIndex = (arr[i] - min + 1) % len;
         if (swapIndex < 0 && swapIndex > arr.length) {
           return 0;
