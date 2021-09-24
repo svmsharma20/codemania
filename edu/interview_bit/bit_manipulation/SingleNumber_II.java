@@ -22,7 +22,7 @@ public class SingleNumber_II {
             }
             checker >>>= 1;
             ans |= (noOfOneBitsAtIthPosition % 3);
-            if(i != 31){
+            if (i != 31) {
                 ans <<= 1;
             }
         }
@@ -30,4 +30,29 @@ public class SingleNumber_II {
         return ans;
     }
 
+    // optimized solution
+    public int singleNumber(final int[] A) {
+        // https://www.youtube.com/watch?v=3gJxLkPPW6M
+
+        int threeN = Integer.MAX_VALUE;
+        int threeNPlusOne = 0;
+        int threeNPlusTwo = 0;
+
+        for (int i = 0; i < A.length; i++) {
+            int threeNCommon = (A[i] & threeN);
+            int threeNPlusOneCommon = (A[i] & threeNPlusOne);
+            int threeNPlusTwoCommon = (A[i] & threeNPlusTwo);
+
+            threeN ^= threeNCommon;
+            threeNPlusOne |= threeNCommon;
+
+            threeNPlusOne ^= threeNPlusOneCommon;
+            threeNPlusTwo |= threeNPlusOneCommon;
+
+            threeNPlusTwo ^= threeNPlusTwoCommon;
+            threeN |= threeNPlusTwoCommon;
+        }
+
+        return threeNPlusOne;
+    }
 }
