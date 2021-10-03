@@ -1,4 +1,4 @@
-package edu.leetcode.array;
+package edu.leetcode.array.medium;
 
 public class SetMatrixZeroes {
     public static void main(String[] args) {

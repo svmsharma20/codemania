@@ -1,4 +1,4 @@
-package edu.leetcode.array;
+package edu.leetcode.array.hard;
 
 public class MedianOfTwoSortedArray {
     

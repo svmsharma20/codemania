@@ -1,4 +1,4 @@
-package edu.leetcode.array;
+package edu.leetcode.array.easy;
 
 /*
  * https://leetcode.com/problems/build-array-from-permutation/
