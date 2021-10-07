@@ -4,8 +4,6 @@ public class ReverseWordsInAString {
 
   public String reverseWords(String s) {
 
-    int flagCount = 0;
-
     StringBuilder sb = new StringBuilder();
     StringBuilder res = new StringBuilder();
 
@@ -13,7 +11,6 @@ public class ReverseWordsInAString {
       char ch = s.charAt(i);
       if (ch != ' ') {
         sb.insert(0, ch);
-        flagCount = 0;
       } else if (sb.length() > 0) {
         sb.append(' ');
         res.append(sb);
