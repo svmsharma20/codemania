@@ -1,4 +1,4 @@
-package edu.design_patterns.observable_pattern;
+package edu.design_patterns.observable;
 
 import java.util.ArrayList;
 
