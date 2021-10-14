@@ -27,11 +27,31 @@ public class RemoveElementFromArray {
             i++;
         }
 
-        while (j<aList.size()-1){
-            aList.remove(aList.size()-1);
+        while (j < aList.size() - 1) {
+            aList.remove(aList.size() - 1);
         }
 
         return aList.size();
     }
 
+    public int removeDuplicates(ArrayList<Integer> a) {
+        int i = 0;
+        int j = 1;
+        int count = 1;
+
+        while (j < a.size()) {
+            if (a.get(i).intValue() == a.get(j).intValue()) {
+                count++;
+            } else {
+                count = 1;
+            }
+            if (count <= 2) {
+                i++;
+                a.set(i, a.get(j));
+            }
+            j++;
+        }
+
+        return i + 1;
+    }
 }

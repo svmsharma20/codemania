@@ -1,7 +1,6 @@
 package edu.interview_bit.two_pointers;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class RemoveDuplicatesFromSortedArray {
 
@@ -14,7 +13,7 @@ public class RemoveDuplicatesFromSortedArray {
             aList.add(n);
         }
 
-        System.out.println(removeDuplicates(aList));
+        System.out.println(removeDuplicatesOptimized(aList));
     }
 
     private static int removeDuplicates(ArrayList<Integer> aList) {
@@ -28,14 +27,26 @@ public class RemoveDuplicatesFromSortedArray {
             i++;
         }
 
-        aList.set(++j, aList.get(aList.size()-1));
+        aList.set(++j, aList.get(aList.size() - 1));
 
         j++;
 
-        while(j<aList.size()){
-            aList.remove(aList.size()-1);
+        while (j < aList.size()) {
+            aList.remove(aList.size() - 1);
         }
         return aList.size();
     }
 
+    public static int removeDuplicatesOptimized(ArrayList<Integer> a) {
+        int i = 0;
+        int j = 1;
+        while (j < a.size()) {
+            if (a.get(i).intValue() != a.get(j).intValue()) {
+                i++;
+                a.set(i, a.get(j));
+            }
+            j++;
+        }
+        return i + 1;
+    }
 }

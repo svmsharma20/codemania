@@ -24,16 +24,15 @@ public class ImplementPowerFunction {
 			long num = Math.abs(x);
 			int exp = n;
 			long power = 1;
-			long mod = d;
 
 			while(exp>0){
 				if((exp&1)>0){
-					power = ((power%d) * (num%d))%d;
+					power = (power * num) % d;
 				}
-				num = ((num%d) * (num%d))%d;
-				exp >>= 1;
+                num = (num * num) % d;
+                exp >>= 1;
 			}
 
-			return (int)power;
+        return (int) ((isNeg && n % 2 == 1) ? (power * -1) : power);
 	}
 }
