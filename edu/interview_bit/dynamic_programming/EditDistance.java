@@ -17,8 +17,13 @@ public class EditDistance {
                 } else if (A.charAt(i - 1) == B.charAt(j - 1)) {
                     dp[i][j] = dp[i - 1][j - 1];
                 } else {
+                    // Insert
                     int min = dp[i - 1][j] + 1;
+
+                    // Replace
                     min = Math.min(min, dp[i - 1][j - 1] + 1);
+
+                    // Delete
                     min = Math.min(min, dp[i][j - 1] + 1);
                     dp[i][j] = min;
                 }
